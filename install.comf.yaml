@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.zprofile: zprofile
+    ~/.zshrc: 
+      path: zshrc
+      force: true
+    ~/.oh-my-zsh/completions: oh-my-zsh/completions
+    "~/Library/Application\ Support/Code/User/settings.json":
+      force: true
+      path: vscode.json
+      
+- create:
+    - ~/repos
