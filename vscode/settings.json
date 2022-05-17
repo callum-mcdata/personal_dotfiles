@@ -1,0 +1,67 @@
+{   
+    // associate SQL files with better jinja extension
+    "files.associations": {
+        //all SQL files with better jinja
+        "*.sql": "jinja-sql",
+        //dbt snippet associations for vscode-dbt
+        "**/code/**/**/*.yaml": "jinja-yaml",
+        "**/code/**/**/*.yml": "jinja-yaml",
+        "**/code/**/**/*.sql": "jinja-sql",
+        "**/code/**/**/docs/**/*.md": "jinja-md"
+    },
+    
+    //?
+    "terminal.integrated.tabs.enabled": true,
+    // can be upadte to whatever preference
+    "editor.rulers": [80],
+
+    // show whitespaces as dots
+    "editor.renderWhitespace": "all",
+
+    // easier to see if there are unsaved changes
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.labelFormat": "medium",
+
+    // Configure spell checking extension
+    // The Language local to use when spell checking. "en", "en-US" and "en-GB" are currently supported by default.
+    "cSpell.language": "en",
+
+    // Controls the maximum number of spelling errors per document.
+    "cSpell.maxNumberOfProblems": 100,
+
+    // Controls the number of suggestions shown.
+    "cSpell.numSuggestions": 8,
+
+    // The minimum length of a word before checking it against a dictionary.
+    "cSpell.minWordLength": 4,
+
+    // Specify file types to spell check.
+    // Following Erika's suggestion of only spell checking docs and md files
+    "cSpell.enabledLanguageIds": [
+        "markdown",
+        "yml"
+    ],
+
+    // Enable / Disable the spell checker.
+    "cSpell.enabled": true,
+
+    // User words to add to dictionary.  Should only be in the user settings.
+    // Adding these words as common ones used in the installation process
+    "cSpell.userWords": [
+        "dotfile",
+        "dotbot",
+        "brewfile",
+        "jaffle"
+    ],
+
+    // Python formatter settings
+    // Keeping this here for dbt python models
+    "python.formatting.provider": "black",
+
+    // format on save for Python only
+    // Keeping this here for dbt python models
+    "editor.formatOnSave": false,
+    "[python]": {
+      "editor.formatOnSave": true
+     }
+}
