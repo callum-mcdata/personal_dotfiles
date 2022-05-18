@@ -10,5 +10,7 @@ This is a first attempt at establishing a baseline setup for developer experienc
 - **zprofile**: A zprofile is a file that contains commands that are executed at time of login, **NOT** at time of terminal startup. 
 - **zshrc**: A zshrc is a file that contains commands that are executed at the start of each terminal creation.
 
+- **pre-install.sh**: A pre-install.sh is a script file that checks for whether Homebrew, oh-my-zsh, Mac-CLI, and ZSH are installed. If not, it installs them
+
 - **vscode/extensions.txt**: The extensions text file contains the list of identifiers for extensions that we recommend installing in VSCode
 - **vscode/settings.json**: The settings.json contains settings that overwrite the default settings in VSCode. We recommend the ones contained within this file
