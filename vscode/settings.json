@@ -47,4 +47,15 @@
         "sql"
     ],
 
+    // easier to see if there are unsaved changed
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.labelFormat": "medium",
+
+    // make a vertical line so we don't make lines too long
+    "editor.rulers": [80],
+
+    // show whitespace as dots
+    // (easier to count out indentation and spot trailing whitesapce)
+    "editor.renderWhitespace": "all"
+
 }
