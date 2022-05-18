@@ -13,6 +13,38 @@
         "editor.quickSuggestions": {
         "strings": true
         }
-    }
+    },
+
+    // this is so you can easily jump to your compiled SQL files
+    // you can do COMMAND + R to hop to the compiled sql! And then again to get to the run sql!
+    // HOWEVER, it does requrie the installation of findrelated.
+    "findrelated.workspaceRulesets": [
+        {
+            "name": "sql",
+            "rules": [
+                {
+                    "pattern": "^(.*/)?models/(.*/)?(.+\\.sql)$",
+                    "locators": [
+                        "**/compiled/**/$3"
+                    ]
+                },
+                {
+                    "pattern": "^(.*/)?compiled/(.*/)?(.+\\.sql)$",
+                    "locators": [
+                        "**/run/**/$3"
+                    ]
+                },
+                {
+                    "pattern": "^(.*/)?run/(.*/)?(.+\\.sql)$",
+                    "locators": [
+                        "**/models/**/$3"
+                    ]
+                }
+            ]
+        }
+    ],
+    "findrelated.applyRulesets": [
+        "sql"
+    ],
 
 }
