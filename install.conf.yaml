@@ -20,20 +20,14 @@
 
 - clean: ['~']
 
-- brewfile:
-    # This accepts the same options as `brew bundle` command:
-    file: Brewfile
-    # Do not upgrade packages 
-    no-upgrade: true
-    # Will print all output from brew
-    stdout: true
-    stderr: true
-    
+- shell:
+  - [brew bundle, Installing Homebrew formulas from Brewfile]
 
 - link:
     ~/.gitconfig: 
       path: gitconfig
       force: true
+    ~/Brewfile: Brewfile
     ~/.zprofile: 
       path: zprofile
       force: true

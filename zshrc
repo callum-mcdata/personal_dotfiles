@@ -8,8 +8,8 @@ ZSH_DISABLE_COMPFIX=true
 
 # Path to your oh-my-zsh installation.
 
-export ZSH = "/Users/callummccann/.oh-my-zsh"
-ZSH_CUSTOM="/Users/callummccann/repos/community_dotfiles/oh-my-zsh"
+export ZSH="/Users/callummccann/.oh-my-zsh"
+# ZSH_CUSTOM="/Users/callummccann/repos/community_dotfiles/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -80,7 +80,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # Personal alias files are kept in dotfiles/oh-my-zsh
 
 # Enable starship theme
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
