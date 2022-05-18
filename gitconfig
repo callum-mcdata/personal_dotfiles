@@ -1,0 +1,7 @@
+[user]
+	name = Callum McCann
+	email = cmccann51@gmail.com
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

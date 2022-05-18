@@ -20,7 +20,7 @@
 
 - brewfile:
     # This accepts the same options as `brew bundle` command:
-    file: brewfile
+    file: Brewfile
 
 - link:
     ~/.gitconfig: gitconfig
