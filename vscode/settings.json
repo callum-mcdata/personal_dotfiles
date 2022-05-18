@@ -1,4 +1,4 @@
-{   
+{
     // This is derived from Anders Discourse post: https://discourse.getdbt.com/t/setting-up-vscode-to-use-with-the-dbt-cli/3291
     "files.associations": {
         "*.sql": "jinja-sql", // all .sql files
@@ -6,13 +6,8 @@
         "**/target/**": "",
         // I don't personally use these, but you can also have jinja work for `yaml` and `md` files
         "**/<dbt-project-dir>/**/*.yaml": "jinja-yaml",
-         "**/<dbt-project-dir>/**/*.yml": "jinja-yaml",
+        "**/<dbt-project-dir>/**/*.yml": "jinja-yaml",
         "**/<dbt-project-dir>/**/docs/**/*.md": "jinja-md"
-
-        // the vscode-dbt docs say you may need this
-        "editor.quickSuggestions": {
-        "strings": true
-        }
     },
 
     // this is so you can easily jump to your compiled SQL files
