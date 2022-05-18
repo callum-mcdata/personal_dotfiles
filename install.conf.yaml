@@ -1,8 +1,15 @@
-- clean: ['~']
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stderr: true
 
 - shell:
   - [sh pre-install.sh, Running pre installation script]
   - [git submodule update --init --recursive, Installing submodules]
+
+- clean: ['~']
 
 - link:
     ~/.gitconfig: gitconfig
