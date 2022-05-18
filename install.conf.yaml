@@ -4,6 +4,14 @@
       relink: true
     shell:
       stderr: true
+    brewfile:
+      stdout: false
+      stderr: false
+      include: ['tap', 'brew', 'cask']
+
+- brewfile:
+    # This accepts the same options as `brew bundle` command:
+    file: brewfile
 
 - shell:
   - [sh pre-install.sh, Running pre installation script]
