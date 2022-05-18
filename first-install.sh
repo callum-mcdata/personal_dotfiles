@@ -15,13 +15,15 @@ brew tap homebrew/bundle  # Install Homebrew Bundle
 
 if [ -d ~/.oh-my-zsh ];
   then echo "oh-my, it's already installed" ;
-  else echo "oh-my-zsh not installed, installing..." && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" ; 
+  else echo "oh-my-zsh not installed, installing..."
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" ; 
 fi
 
 # Check for and install zsh-autosuggestions
 if [ -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] ; 
   then echo "zsh-autosuggestions is in the house" ; 
-  else echo "Installing zsh-autosuggestions" && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ;
+  else echo "Installing zsh-autosuggestions"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ;
 fi
 
 # Install git to get the brewfile
