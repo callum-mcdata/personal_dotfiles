@@ -51,6 +51,10 @@
 
     // show whitespace as dots
     // (easier to count out indentation and spot trailing whitesapce)
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "editor.accessibilitySupport": "off"
 
 }

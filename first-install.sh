@@ -33,21 +33,41 @@ brew install git
 brew tap microsoft/git
 brew install --cask git-credential-manager-core
 
-## Configure git globally
-echo "Configuring git name and email globally "
-read  "gitusername?Enter git user.name"
-git config --global user.name $gitusername
-read  "gituseremail?Enter git user.email" 
-git config --global user.email $gituseremail
+## Entering in the git username if not exists
+if [ -z git config --global user.name];
+  then echo "Configuring git name globally "
+      read  "gitusername?Enter git user.name"
+      git config --global user.name $gitusername;
+  else "Your name is already input";
+fi
+
+## Entering in the git email if not exists
+if [ -z git config --global user.email];
+  then echo "Configuring git email globally"
+      read  "gituseremail?Enter git user.email" 
+      git config --global user.email $gituseremail;
+  else echo "Your email is already input";
+fi
+
+## Setting default branch to main
 git config --global init.defaultBranch main
 
 # Create a directory for repos
-echo "Creating repos directory"
-mkdir -p repos
+if [ -d ~/repos ];
+  then echo "oh-my, it's already created" ;
+  else echo "Creating repos directory"
+  mkdir -p repos ;
+fi
 cd repos
 
 # Remove the dotfiles repo if it already exists and restore from the source
-git clone https://github.com/callum-mcdata/community_dotfiles.git
+
+if [ -d ~/community_dotfiles ];
+  then echo "Looks like the community_dotfile repo has already been created!";
+  else echo "Creating community_dotfile repo now"
+  git clone https://github.com/callum-mcdata/community_dotfiles.git;
+fi
+
 cd community_dotfiles
 
 # Run the dotfile install
