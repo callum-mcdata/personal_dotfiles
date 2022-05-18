@@ -11,3 +11,4 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 samuelcolvin.jinjahtml
 streetsidesoftware.code-spell-checker
+amodio.find-related
