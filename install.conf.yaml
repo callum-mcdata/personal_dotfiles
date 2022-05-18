@@ -4,10 +4,12 @@
       relink: true
     shell:
       stderr: true
-    brewfile:
-      stdout: false
-      stderr: false
-      include: ['tap', 'brew', 'cask']
+    # brewfile:
+    #   stdout: false
+    #   stderr: false
+    #   include: ['tap', 'brew', 'cask']
+    #   # Optional, if you want to run install command as another user:
+    #   sudo: brewuser
 
 - shell:
   - [sh pre-install.sh, Running pre installation script]
@@ -21,14 +23,24 @@
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile
+    # Do not upgrade packages 
+    no-upgrade: true
+    # Will print all output from brew
+    stdout: true
+    stderr: true
+    
 
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.zprofile: zprofile
+    ~/.gitconfig: 
+      path: gitconfig
+      force: true
+    ~/.zprofile: 
+      path: zprofile
+      force: true
     ~/.zshrc: 
       path: zshrc
       force: true
     ~/.oh-my-zsh/completions: oh-my-zsh/completions
     "~/Library/Application\ Support/Code/User/settings.json":
       force: true
-      path: vscode.json
+      path: vscode/settings.json
