@@ -23,6 +23,10 @@ in a format that is conduvice to dbt development.
 - Manage as MUCH as we can with Homebrew
 - Each dbt environment should be isolated 
 - Make the command line as friendly and fun as possible!
+- Use symlinks so that all config is contain in the same location.
+    - *What is a symlink?* A symlink is a way of designating to a file that
+     the source version exists in the .dotfile repo but to the OS it also 
+     appears to exist in the designated location.
 
 ## List of Installs:
 - **Git**: Of course we're installing git. It's needed for dbt. 
@@ -54,11 +58,46 @@ in a format that is conduvice to dbt development.
 ### Terminal Completions
 - **oh-my-zsh/completions/_dbt**: This file contains some autocompletion scripts for dbt command line interaction
 
+# Installation!
+Should I have hidden installation behind that wall of text? Probably not, but hey, 
+better to read it and learn what each file is doing instead of just skipping to the
+installation section. Unless you did just that - touche. 
+
+There are two installation paths that we will call out. The first is for M1 Macs
+and the latter is for Intel based Macs. 
+
+### M1 Macs:
+1. Download [iTerm2](https://iterm2.com/). 
+    a. On installation, it may inform you that you need to install command line 
+    developer tools. Feel free to install these.
+    b. Open Applications in Finder and find iTerm. `Duplicate` this application. On
+    the duplicate version, select `Get Info` and check `Open using Rosetta`. Rename
+    the application to `iTerm (Rosetta)`. 
+        - Why are we doing this? M1 Macs don't use the same chip architecture as 
+        Intel chips and they don't play nicely with some data science packeges. This
+        is a workaround. 
+
+2. Run the first-install.sh script. 
+    a. If installing for the first time, copy the raw code from this script and paste
+    in your iTerm (Rosetta) terminal. Then hit enter. 
+
+3. You should have everything that you need!
+    a. If you ever want to make changes in the future to your configuration, navigate
+    to the repository and make changes to the files contained. 
+
+### Intel Macs:
+1. Download [iTerm2](https://iterm2.com/). 
+    a. On installation, it may inform you that you need to install command line 
+    developer tools. Feel free to install these.
+
+
 
 # Shoutouts!
 This repository wouldn't be possible without the help from 2 major people:
 - Erika Pullman at Hex
+    - [Link to her dotfiles here](https://github.com/erika-e/dotfiles)
 - Gwen Windflower at dbt Labs
+    - [Link to her dotfiles here](https://github.com/gwenwindflower/dotfiles)
 
 Both of these individuals provided their dotfiles in public repositories and we 
 were able to combine the best of both of them to create a great baseline for dbt 

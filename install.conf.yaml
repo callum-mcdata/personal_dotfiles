@@ -4,15 +4,9 @@
       relink: true
     shell:
       stderr: true
-    # brewfile:
-    #   stdout: false
-    #   stderr: false
-    #   include: ['tap', 'brew', 'cask']
-    #   # Optional, if you want to run install command as another user:
-    #   sudo: brewuser
+      stdout: true
 
 - shell:
-  - [sh pre-install.sh, Running pre installation script]
   - [git submodule update --init --recursive, Installing submodules]
 
 - create:
@@ -24,9 +18,9 @@
   - [brew bundle, Installing Homebrew formulas from Brewfile]
 
 - link:
-    ~/.gitconfig: 
-      path: gitconfig
-      force: true
+    # ~/.gitconfig: 
+    #   path: gitconfig
+    #   force: true
     ~/Brewfile: Brewfile
     ~/.zprofile: 
       path: zprofile
