@@ -2,17 +2,17 @@ setopt interactivecomments
 #!/bin/bash
 
 # Check if Homebrew is installed
-if [ ! -f "`which brew`" ]; then
-  echo 'Installing homebrew'
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-  echo 'Updating homebrew'
-  brew update
+if [ ! -f "`which brew`" ]; 
+  then echo 'Installing homebrew'
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+  else echo 'Updating homebrew'
+  brew update;
 fi
-brew tap homebrew/bundle  # Install Homebrew Bundle
+
+# Install Homebrew Bundle
+brew tap homebrew/bundle
 
 # Check if oh-my-zsh is installed
-
 if [ -d ~/.oh-my-zsh ];
   then echo "oh-my, it's already installed" ;
   else echo "oh-my-zsh not installed, installing..."
@@ -34,38 +34,30 @@ brew tap microsoft/git
 brew install --cask git-credential-manager-core
 
 ## Entering in the git username if not exists
-if [ -z git config --global user.name];
-  then echo "Configuring git name globally "
-      read  "gitusername?Enter git user.name"
-      git config --global user.name $gitusername;
-  else "Your name is already input";
-fi
+echo "Configuring git name globally "
+read  "gitusername?Enter git user.name"
+git config --global user.name $gitusername;
 
 ## Entering in the git email if not exists
-if [ -z git config --global user.email];
-  then echo "Configuring git email globally"
-      read  "gituseremail?Enter git user.email" 
-      git config --global user.email $gituseremail;
-  else echo "Your email is already input";
-fi
+echo "Configuring git email globally"
+read  "gituseremail?Enter git user.email" 
+git config --global user.email $gituseremail;
 
 ## Setting default branch to main
 git config --global init.defaultBranch main
 
 # Create a directory for repos
 if [ -d ~/repos ];
-  then echo "oh-my, it's already created" ;
+  then echo "Look - it's a repo and it's already created" ;
   else echo "Creating repos directory"
   mkdir -p repos ;
 fi
 cd repos
 
 # Remove the dotfiles repo if it already exists and restore from the source
-
-if [ -d ~/community_dotfiles ];
-  then echo "Looks like the community_dotfile repo has already been created!";
-  else echo "Creating community_dotfile repo now"
-  git clone https://github.com/callum-mcdata/community_dotfiles.git;
+if ! git clone "https://github.com/callum-mcdata/community_dotfiles.git" "community_dotfiles" 2>/dev/null && [ -d "community_dotfiles" ] ; 
+  then echo "Clone failed because the folder community_dotfiles exists";
+  else echo "something went wrong";
 fi
 
 cd community_dotfiles
