@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "dbt-prerelease"
 version = "0.1.0"
-description = "The prerelease version of dbt"
+description = "This environment will always contain the most up to date version of dbt, including pre-releases"
 authors = ["Callum McCann <cmccann51@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -11,7 +11,6 @@ dbt-redshift = {version="^1.1.0", allow-prereleases = true}
 dbt-postgres = {version="^1.1.0", allow-prereleases = true}
 dbt-bigquery = {version="^1.1.0", allow-prereleases = true}
 dbt-spark = {version="^1.1.0", allow-prereleases = true}
-
 
 [tool.poetry.dev-dependencies]
 

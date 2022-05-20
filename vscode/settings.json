@@ -55,7 +55,6 @@
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
-    "editor.accessibilitySupport": "off",
-    "workbench.colorTheme": "Rosé Pine Moon"
+    "editor.accessibilitySupport": "off"
 
 }
