@@ -111,6 +111,7 @@ alias dbt-prerelease="source /Users/${USER}/repos/personal_dotfiles/poetry_envir
 alias dbt-latest="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-latest/.venv/bin/activate"
 alias dbt-package-development="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-package-development/.venv/bin/activate"
 alias dbt-testing-metrics="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-testing-metrics/.venv/bin/activate"
+alias dbt-docs-venv="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-docs/.venv/bin/activate"
 
 # Personal alias files are kept in dotfiles/oh-my-zsh
 
