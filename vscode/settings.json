@@ -56,6 +56,7 @@
         "FIG_NEW_SESSION": "1"
     },
     "editor.accessibilitySupport": "off",
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.ignoreRebaseWarning": true
 
 }
