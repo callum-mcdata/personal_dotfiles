@@ -8,7 +8,7 @@ export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 
-export ZSH="/Users/${USER}/.oh-my-zsh"
+export ZSH="/Users/callummccann/.oh-my-zsh"
 # ZSH_CUSTOM="/Users/callummccann/repos/community_dotfiles/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -107,11 +107,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dbt-prerelease="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-prerelease/.venv/bin/activate"
-alias dbt-latest="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-latest/.venv/bin/activate"
-alias dbt-package-development="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-package-development/.venv/bin/activate"
-alias dbt-testing-metrics="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-testing-metrics/.venv/bin/activate"
-alias dbt-docs-venv="source /Users/${USER}/repos/personal_dotfiles/poetry_environments/dbt-docs/.venv/bin/activate"
+alias dbt-prerelease="source /Users/callummccann/repos/personal_dotfiles/poetry_environments/dbt-prerelease/.venv/bin/activate"
+alias dbt-latest="source /Users/callummccann/repos/personal_dotfiles/poetry_environments/dbt-latest/.venv/bin/activate"
+alias dbt-package-development="source /Users/callummccann/repos/personal_dotfiles/poetry_environments/dbt-package-development/.venv/bin/activate"
+alias dbt-testing-metrics="source /Users/callummccann/repos/personal_dotfiles/poetry_environments/dbt-testing-metrics/.venv/bin/activate"
+alias dbt-docs-venv="source /Users/callummccann/repos/personal_dotfiles/poetry_environments/dbt-docs/.venv/bin/activate"
 
 # Personal alias files are kept in dotfiles/oh-my-zsh
 

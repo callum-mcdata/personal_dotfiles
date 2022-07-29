@@ -33,8 +33,3 @@
     "~/Library/Application\ Support/Code/User/settings.json":
       force: true
       path: vscode/settings.json
-
-- shell:
-  - [cd && cd repos/personal_dotfiles/poetry_environments/dbt-latest && poetry install]
-  - [cd && cd repos/personal_dotfiles/poetry_environments/dbt-prerelease && poetry install]
-  - [cd && cd repos/personal_dotfiles/poetry_environments/dbt-package-development && poetry install]
