@@ -57,6 +57,7 @@
     },
     "editor.accessibilitySupport": "off",
     "git.confirmSync": false,
-    "git.ignoreRebaseWarning": true
+    "git.ignoreRebaseWarning": true,
+    "git.enableSmartCommit": true
 
 }
