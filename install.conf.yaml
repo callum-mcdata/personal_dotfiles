@@ -15,7 +15,11 @@
 - clean: ['~']
 
 - shell:
+  - [python3.10 -m pip install --upgrade pip]
   - [brew bundle, Installing Homebrew formulas from Brewfile]
+  - [pip3 install pytest]
+  - [brew tap miniscruff/changie https://github.com/miniscruff/changie]
+  - [brew install changie]
   - [poetry config virtualenvs.in-project true]
 
 - link:
