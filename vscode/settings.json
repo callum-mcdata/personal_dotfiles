@@ -56,6 +56,9 @@
         "FIG_NEW_SESSION": "1"
     },
     "editor.accessibilitySupport": "off",
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "editor.inlineSuggest.enabled": true,
+    "editor.tabSize": 2
 
 }

@@ -1,10 +1,11 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 ZSH_DISABLE_COMPFIX=true
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Path to your oh-my-zsh installation.
 
@@ -117,5 +118,13 @@ alias dbt-testing-metrics="source /Users/${USER}/repos/personal_dotfiles/poetry_
 # Enable starship theme
 eval "$(starship init zsh)"
 
+# pnpm
+export PNPM_HOME="/Users/callummccann/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
